@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 
-export default function RenderName(props) {
-  return <div>{props.name}</div>;
+export default function RenderName({ name = 'Zach' }) {
+  return <div>{name}</div>;
 }
 
 RenderName.propTypes = {
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
 };
